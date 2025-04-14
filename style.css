@@ -1,0 +1,132 @@
+body{
+	width:100%;
+	height:100vh;
+	background: rgb(240, 239, 243);
+	/* 把白色框放屏幕正中间 */
+	margin: auto;
+	/* 设定网页布局模式，拉伸适配型 */
+	display: flex;
+	/* 设定网页布局模式的框架下定义主轴位置 */
+	flex-direction: column;
+	/* 将组元素里的类统一水平居中，拉伸适配 */
+	align-items: center;
+	/* 配合第二行“height：100vh”能实现屏幕垂直居中，拉伸适配 */
+	justify-content: center;
+}	
+	/* 建立白色底框容器 */
+	.container{
+		width:375px;
+		height:520px;
+		background: #fff;
+		/* 将白色边框切为圆角增加美感 */
+		border-radius: 15px;
+		/* 添加白色边框的阴影增强立体感 30px*/
+		box-shadow: 4px 4px 30px rgba(0,0,0,0.06);
+		/* form顶格太丑了，在白色底框加点内边距 */
+		padding:20px;
+		/* 容器中内容溢出了，添加滚动栏 */
+		overflow-y: scroll;
+			}
+			
+			/* 添加webkit，让滚动条不显示 */
+			.container::-webkit-scrollbar{
+				display: none;
+			}
+			
+	/* 调用container白色底框里的搜索框容器form */
+	.container form{
+		width:100%;
+		/* 给搜索框加个1像素外边框 */
+		border: 1px solid rgb(82,74,235);
+		/* 将边框切为圆角 */
+		border-radius: 4px;
+		/* 为保证搜索图标和搜索框在同一行，加入以下布局代码 */
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+	}
+	/* 调用form里面函数内容 */
+	.container form input{
+		/* 去掉搜索边框 */
+		border: none;
+		/* 去掉轮廓 */
+		outline: none;
+		/* 去掉阴影 */
+		box-shadow: none;
+		width: 100%;
+		font-size: 14px;
+		font-weight: 200;
+	}
+	.container form i{
+		/* 在图标左边添加一些填充像素 */
+		padding-left: 10px;
+	}
+	
+	.Recipe-list{
+		padding-top: 20px 0;
+	}
+	/* 设置Recipe组别的布局 */
+	.Recipe{
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		/* padding-bottom: 15px; */
+	}
+	/* 设置Recipe组别照片的样式 */
+	.Recipe img{
+		width: 100px;
+		height: 70px;
+		/* 保持长宽比例填充或剪裁图片 */
+		object-fit: cover;
+		/* 剪圆角 */
+		border-radius: 5px;
+	}
+	
+	/* 别让俩标题往左顶着图片 */
+	.Recipe .R-details{
+		padding-left: 15px;
+	}
+	
+	.Recipe .R-details h2{
+		font-size: 16px;
+		color: #363636;
+	}
+	
+	.Recipe .R-details h3{
+		font-size: 12px;
+		color: #828282;
+	}
+	.Recipe .R-details h4{
+		font-size: 9px;
+		color: #828282;
+	}
+	
+	/* 增加了跳转链接后新增的布局样式，添加recipe-link类以便精确控制样式 */
+	.Recipe a.recipe-link {
+		/* display: flex保持原有弹性布局 */
+	  display: flex;
+	  align-items: center;
+	  /* width: 100%确保链接区域填满容器 */
+	  width: 100%;
+	  text-decoration: none;
+	  /* color: inherit保持文字颜色一致 */
+	  color: inherit;
+	}
+	
+	.Recipe a.recipe-link:hover {
+	  opacity: 0.9;
+	}
+	
+	/* 确保图片和文字区域保持原有布局 */
+	.Recipe a.recipe-link img,
+	.Recipe a.recipe-link .R-details {
+	  pointer-events: none; /* 防止链接内的元素阻止点击 */
+	}
+	
+	/* 加载状态样式 */
+	.loading, .error {
+	  text-align: center;
+	  padding: 20px;
+	  color: #666;
+	}

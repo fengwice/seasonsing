@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+		
+		<title>番茄炒蛋</title>
+		<!-- 链接网页CDN搜索图标 -->
+		<!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+		<!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4891186_a4nmjqn0lfs.css">
+		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+		  </head>
+		<!-- 链接样式表 -->
+		<link rel="stylesheet" href="style.css"
+	</head>
+	<body>
+		
+		<!-- 创建白色底框容器 -->
+		<section class="container">
+			<form>
+				<!-- 给搜索图标链接赋类名 -->
+				<!-- <i class="fa fa-search"></i> -->
+				<i class="iconfont icon-search"></i>
+				<!-- onkeyup为搜索框添加实际搜索功能,需要js支持搜索ID -->
+				<input type="text" name="" id="search-item" placeholder="食材 调料"
+				onkeyup="search()">
+			</form>
+			
+			<!-- 创建下拉菜谱菜单 -->
+			<div class="Recipe-list" id="Recipe-list" >
+				<!-- 把其中的一个打包成组 -->
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1784y1q7Ca" class="recipe-link">
+					<img src="img/f001.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>蒜香口蘑鸡</h2>
+						<h3>鸡腿肉、白蘑菇、大蒜</h3>
+						<h4>大蒜、料酒、料酒、酱油（生抽、老抽）蚝油、淀粉、黑胡椒粉</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1RWYFeAEtd" class="recipe-link">
+					<img src="img/f002.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>土豆焖饭</h2>
+						<h3>土豆、胡萝卜</h3>
+						<h4>大蒜末、葱花、辣椒、盐、八角、酱油（生抽、老抽）</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV15X4y1V73V" class="recipe-link">
+					<img src="img/f003.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>早餐饼</h2>
+						<h3>鸡蛋、面粉、胡萝卜、牛奶</h3>
+						<h4>葱花、盐</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1UM4y1u7Wa" class="recipe-link">
+					<img src="img/f004.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>日式肥牛饭</h2>
+						<h3>肥牛卷、白洋葱、鸡蛋</h3>
+						<h4>盐、酱油（生抽、老抽）、蚝油、淀粉、白胡椒粉、味淋(料酒+糖）</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1Rw411R71N" class="recipe-link">
+					<img src="img/f005.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>京酱肉丝</h2>
+						<h3>猪肉（里脊肉）、鸡蛋、胡萝卜、青瓜、千张（豆腐皮）</h3>
+						<h4>大蒜、料酒、料酒、酱油（生抽、老抽）蚝油、淀粉、黑胡椒粉</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1vU4y1v7Hv" class="recipe-link">
+					<img src="img/f006.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>口蘑小汉堡</h2>
+						<h3>口蘑、虾滑、生菜、番茄、芝士</h3>
+						<h4>番茄酱、沙拉酱</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1MW4y1H7ij" class="recipe-link">
+					<img src="img/f007.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>土豆鸡蛋菜</h2>
+						<h3>猪肉、土豆、粉条、鸡蛋</h3>
+						<h4>蒜、料酒、生抽（酱油）、蚝油、盐、鸡精</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1At4y1F7W8" class="recipe-link">
+					<img src="img/f008.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>板栗焖饭</h2>
+						<h3>干香菇、板栗、猪肉（五花肉）、土豆、胡萝卜、大米</h3>
+						<h4>泡香菇的水、生抽、酱油、盐</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV18P411E7z7" class="recipe-link">
+					<img src="img/f009.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>毛豆肉沫拌饭</h2>
+						<h3>毛豆、猪肉沫</h3>
+						<h4>蒜末、小米辣、姜末、盐、糖、淀粉、酱油（生抽、老抽）、蚝油</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1jV4y1u7nh" class="recipe-link">
+					<img src="img/f010.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>白菜豆腐煲</h2>
+						<h3>豆腐、鸡蛋、白菜、木耳、火腿肠、鹌鹑蛋</h3>
+						<h4>葱、蒜、小米椒、盐、酱油（生抽、老抽）、蚝油、香醋、糖、鸡精</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV11c41177Hz" class="recipe-link">
+					<img src="img/f011.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>番茄肉酱</h2>
+						<h3>番茄(西红柿)、培根、猪肉、牛肉、洋葱、西芹</h3>
+						<h4>蒜泥、红酒、黄油、番茄碎罐头、番茄膏、高汤、黑胡椒、盐、罗勒草、欧芹</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1dq4y1s77U" class="recipe-link">
+					<img src="img/f012.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>笋干焖肉</h2>
+						<h3>笋干、猪肉（五花肉）</h3>
+						<h4>八角、香叶、桂皮、干辣椒、小葱、姜片、冰糖、料酒、盐、酱油（生抽、老抽）、蚝油</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1EE411X75f" class="recipe-link">
+					<img src="img/f013.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>五柳炸蛋</h2>
+						<h3>鸡蛋、五柳菜</h3>
+						<h4>番茄酱、白糖、白醋、盐</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1QP411c7oV" class="recipe-link">
+					<img src="img/f014.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>酱烧鸡腿</h2>
+						<h3>手枪鸡腿</h3>
+						<h4>葱段、姜、盐、酱油（生抽、老抽）、蚝油、糖、白胡椒粉、冰糖</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1rg411e7gq" class="recipe-link">
+					<img src="img/f015.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>番茄牛腩拌饭</h2>
+						<h3>番茄(西红柿)、土豆、牛腩</h3>
+						<h4>姜片、葱、干辣椒、八角、桂皮、蒜末、料酒、冰糖、酱油（生抽、老抽）、蚝油</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1YR4y1X7cB" class="recipe-link">
+					<img src="img/f016.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>番茄玉米排骨汤</h2>
+						<h3>排骨、玉米、胡萝卜、莲藕、香菇</h3>
+						<h4>葱、姜、料酒、盐</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV16P4y1d7tb" class="recipe-link">
+					<img src="img/f017.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>豆浆</h2>
+						<h3>黄豆、小米、大米、花生</h3>
+						<h4>冰糖</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1Fg41187gL" class="recipe-link">
+					<img src="img/f018.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>乌梅饮</h2>
+						<h3>乌梅、陈皮、红枣片、桂圆</h3>
+						<h4>/</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1Pt4y1t7ye" class="recipe-link">
+					<img src="img/f019.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>四神汤(养脾胃)</h2>
+						<h3>山药、茯苓、莲子、芡实</h3>
+						<h4>/</h4>
+					</div>
+					</a>
+				</div>
+				<div class="Recipe">
+					<a target="_blank" href="https://www.bilibili.com/video/BV1zD4y147D4" class="recipe-link">
+					<img src="img/f020.jpg" alt="">
+					<!-- 打包以下信息成为照片同级组 -->
+					<div class="R-details">
+						<h2>玉米浓汤</h2>
+						<h3>土豆 玉米 洋葱 胡萝卜 牛奶</h3>
+						<h4>盐、黑胡椒粉</h4>
+					</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		
+		<script src="app.js"></script>
+	</body>
+</html>
