@@ -8,7 +8,8 @@ const search =() =>{
 	// const product = document.querySelectorAll(".Recipe")
 	// const recipe = document.querySelectorAll(".Recipe")
 	const recipes = document.querySelectorAll(".Recipe")
-	const startTime = performance.now(); // 高精度计时
+	const startTime = performance.now(); 
+	// 高精度计时
 	// 限定搜索的范围在h2和h3
 	// const rname = document.getElementsByTagName("h3")
 	
@@ -55,4 +56,6 @@ const search =() =>{
     { '测试项': '关键词搜索', 
       '耗时(ms)': duration.toFixed(2),
       '数据量': document.querySelectorAll('.Recipe').length
+      }
+  ]);
 }
